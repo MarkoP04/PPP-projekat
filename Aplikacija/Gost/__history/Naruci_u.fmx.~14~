@@ -1,0 +1,51 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Naruci'
+  ClientHeight = 604
+  ClientWidth = 981
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object btnDomaca: TButton
+    Position.X = 272.000000000000000000
+    Position.Y = 240.000000000000000000
+    TabOrder = 0
+    Text = 'Domaca'
+    TextSettings.Trimming = None
+    OnClick = btnDomacaClick
+  end
+  object listBoxItems: TListBox
+    Position.X = 32.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 489.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 485.000000000000000000
+  end
+  object btnNaruci: TButton
+    Position.X = 832.000000000000000000
+    Position.Y = 240.000000000000000000
+    TabOrder = 4
+    Text = 'Naruci'
+    TextSettings.Trimming = None
+    OnClick = btnNaruciClick
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = 'localhost'
+    Port = 6000
+    ReadTimeout = -1
+    Left = 856
+    Top = 536
+  end
+end

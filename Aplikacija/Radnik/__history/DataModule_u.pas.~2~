@@ -1,0 +1,59 @@
+unit DataModule_u;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, IdBaseComponent, IdComponent,
+  IdTCPConnection, IdTCPClient;
+
+type
+  TDataModule1 = class(TDataModule)
+    IdTCPClient1: TIdTCPClient;
+    TListenThread = class(TThread)
+  private
+    FClient: TIdTCPClient;
+  public
+    constructor Create(AClient: TIdTCPClient);
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+constructor TListenThread.Create(AClient: TIdTCPClient);
+begin
+  inherited Create(False); // Start immediately
+  FreeOnTerminate := True;
+  FClient := AClient;
+end;
+
+procedure TListenThread.Execute;
+var
+  Msg: string;
+begin
+  while not Terminated do
+  begin
+    try
+      Msg := FClient.IOHandler.ReadLn; // Blocks until message received
+      TThread.Synchronize(nil,
+        procedure
+        begin
+          ShowMessage('Received: ' + Msg);
+          // Or update a label, log, etc.
+        end);
+    except
+      on E: Exception do
+      begin
+        // Handle disconnect, timeouts, etc.
+        Break;
+      end;
+    end;
+  end;
+end;
+
+end.

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/07/01 11:38:17.000.486,=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 11:39:03.000.538,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Radnik_u.pas=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 11:39:03.000.538,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Radnik_u.fmx=C:\Other programs\RAD Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2025/07/01 11:39:09.000.413,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Radnik_p.dproj=C:\Other programs\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/07/01 11:44:14.000.004,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit2.pas</Transaction>
+    <Transaction>2025/07/01 11:44:51.000.683,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Login_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit2.pas</Transaction>
+    <Transaction>2025/07/01 11:44:51.000.683,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Login_u.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit2.fmx</Transaction>
+    <Transaction>2025/07/01 12:11:42.000.899,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 12:11:58.000.486,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\DataModule_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 12:11:58.000.486,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\DataModule_u.dfm=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.dfm</Transaction>
+    <Transaction>2025/08/26 15:38:38.000.890,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas</Transaction>
+    <Transaction>2025/08/26 15:39:46.000.980,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\SelectTablesFrame.pas</Transaction>
+    <Transaction>2025/08/26 15:39:46.000.980,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\SelectTablesFrame.fmx</Transaction>
+    <Transaction>2025/08/26 15:45:36.000.420,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\SelectTablesFrame.pas=</Transaction>
+    <Transaction>2025/08/26 15:47:52.121,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas</Transaction>
+    <Transaction>2025/08/26 15:48:13.741,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\SelectTables_u.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.fmx</Transaction>
+    <Transaction>2025/08/26 15:48:13.741,C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\SelectTables_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Radnik\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

@@ -1,0 +1,21 @@
+object Frame2: TFrame2
+  Size.Width = 640.000000000000000000
+  Size.Height = 489.000000000000000000
+  Size.PlatformDefault = False
+  object Mojito: TButton
+    Position.X = 32.000000000000000000
+    Position.Y = 32.000000000000000000
+    TabOrder = 0
+    Text = 'Mojito'
+    TextSettings.Trimming = None
+    OnClick = MojitoClick
+  end
+  object Moscow_mule: TButton
+    Position.X = 144.000000000000000000
+    Position.Y = 32.000000000000000000
+    TabOrder = 1
+    Text = 'Moscow Mule'
+    TextSettings.Trimming = None
+    OnClick = Moscow_muleClick
+  end
+end

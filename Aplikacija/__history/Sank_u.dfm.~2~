@@ -1,0 +1,55 @@
+object MainForm: TMainForm
+  Left = 0
+  Top = 0
+  Caption = 'Sank'
+  ClientHeight = 681
+  ClientWidth = 1264
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  Position = poDefault
+  ScreenSnap = True
+  TextHeight = 15
+  object Label1: TLabel
+    Left = 192
+    Top = 83
+    Width = 50
+    Height = 15
+    Caption = 'Password'
+  end
+  object lbl2: TLabel
+    Left = 600
+    Top = 128
+    Width = 19
+    Height = 15
+    Caption = 'lbl2'
+  end
+  object btnDomaca: TButton
+    Left = 712
+    Top = 480
+    Width = 75
+    Height = 25
+    Caption = 'Domaca'
+    TabOrder = 0
+  end
+  object edtPassword: TEdit
+    Left = 192
+    Top = 104
+    Width = 121
+    Height = 23
+    TabOrder = 1
+    Text = 'edtPassword'
+  end
+  object btnLogIn: TButton
+    Left = 192
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = 'Log in'
+    TabOrder = 2
+    OnClick = btnLogInClick
+  end
+end

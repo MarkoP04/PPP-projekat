@@ -1,0 +1,53 @@
+unit Gost_u;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.StdCtrls, Naruci_u, Message1_u;
+
+type
+  TForm1 = class(TForm)
+    btnPozovi: TButton;
+    btnNaplata: TButton;
+    btnNaruci: TButton;
+    procedure btnNaruciClick(Sender: TObject);
+    procedure btnPozoviClick(Sender: TObject);
+  private
+    const TableNum = Integer(1);
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.btnNaruciClick(Sender: TObject);
+begin
+  if Form2 = nil then
+    Form2 := TForm2.Create(Self);
+  Form2.Show;
+  Form1.Hide;
+end;
+
+procedure TForm1.btnPozoviClick(Sender: TObject);
+begin
+if Form2 = nil then
+    Form2 := TForm2.Create(Self);
+Form2.IdTCPClient1.IOHandler.WriteLn('Sto broj ' + IntToStr(TableNum) + ' zove konobara');
+Form3 := TForm3.Create(nil);
+try
+  Form3.Label1.Text := 'Konobar je pozvan i uskoro ce doci.';
+  Form3.Show;
+except
+  Form3.Free;
+  raise;
+end;
+end;
+
+end.

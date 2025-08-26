@@ -1,0 +1,12 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 640
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = 'localhost'
+    Port = 6000
+    ReadTimeout = -1
+    Left = 48
+    Top = 40
+  end
+end

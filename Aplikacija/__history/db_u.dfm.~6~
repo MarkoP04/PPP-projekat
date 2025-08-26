@@ -1,0 +1,22 @@
+object DataModule1: TDataModule1
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Other programs\Programming\DB files\Databases\cafeba' +
+        'r.db'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 232
+    Top = 176
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      '')
+    Left = 408
+    Top = 240
+  end
+end

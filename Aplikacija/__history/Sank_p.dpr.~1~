@@ -1,0 +1,14 @@
+program Sank_p;
+
+uses
+  Vcl.Forms,
+  Sank_u in 'Sank_u.pas' {MainForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.Run;
+end.

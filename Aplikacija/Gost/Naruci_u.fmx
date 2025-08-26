@@ -1,0 +1,69 @@
+object Form2: TForm2
+  Left = 450
+  Top = 210
+  Caption = 'Naruci'
+  ClientHeight = 604
+  ClientWidth = 981
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  Left = 450
+  Top = 210
+  DesignerMasterStyle = 0
+  object listBoxItems: TListBox
+    Position.X = 32.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 200.000000000000000000
+    Size.Height = 489.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    DisableFocusEffect = True
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    Viewport.Width = 196.000000000000000000
+    Viewport.Height = 485.000000000000000000
+  end
+  object btnNaruci: TButton
+    Position.X = 888.000000000000000000
+    Position.Y = 248.000000000000000000
+    TabOrder = 3
+    Text = 'Naruci'
+    TextSettings.Trimming = None
+    OnClick = btnNaruciClick
+  end
+  object Panel1: TPanel
+    Position.X = 240.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 640.000000000000000000
+    Size.Height = 489.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+  end
+  object Kafa: TButton
+    Position.X = 240.000000000000000000
+    Position.Y = 16.000000000000000000
+    TabOrder = 6
+    Text = 'Kafa'
+    TextSettings.Trimming = None
+    OnClick = KafaClick
+  end
+  object Koktel: TButton
+    Position.X = 362.000000000000000000
+    Position.Y = 16.000000000000000000
+    TabOrder = 7
+    Text = 'Koktel'
+    TextSettings.Trimming = None
+    OnClick = KoktelClick
+  end
+  object IdTCPClient1: TIdTCPClient
+    ConnectTimeout = 0
+    Host = 'localhost'
+    Port = 6000
+    ReadTimeout = -1
+    Left = 936
+    Top = 456
+  end
+end

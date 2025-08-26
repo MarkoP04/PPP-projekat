@@ -1,0 +1,58 @@
+unit Sank_u;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.FormTabsBar;
+
+type
+  TMainForm = class(TForm)
+    btnDomaca: TButton;
+    edtPassword: TEdit;
+    Label1: TLabel;
+    btnLogIn: TButton;
+    lbl2: TLabel;
+    FormTabsBar1: TFormTabsBar;
+    Label2: TLabel;
+    btn3: TButton;
+    procedure btnLogInClick(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  MainForm: TMainForm;
+  WorkerID : Integer;
+
+implementation
+
+{$R *.dfm}
+
+uses db_u;
+
+procedure TMainForm.btn3Click(Sender: TObject);
+begin
+DataModule1.IdTCPServer1.StartListening
+end;
+
+procedure TMainForm.btnLogInClick(Sender: TObject);
+var
+   pwd: Integer;
+begin
+  if TryStrToInt(Trim(edtPassword.Text), pwd) then
+  begin
+    workerID := DataModule1.WorkerLogin(pwd);
+    if workerID <> -1 then
+      lbl2.Caption := 'Logged in: ' + IntToStr(workerID)
+    else
+      lbl2.Caption := 'User not found.';
+  end
+  else
+    ShowMessage('Please enter a valid numeric password.');
+end;
+
+end.

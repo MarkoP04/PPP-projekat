@@ -1,0 +1,27 @@
+object Form1: TForm1
+  Left = 240
+  Top = -450
+  Caption = 'Radnik'
+  ClientHeight = 1440
+  ClientWidth = 720
+  Fill.Color = claWheat
+  Fill.Kind = Solid
+  Position = Designed
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  Left = 240
+  Top = 65086
+  DesignerMasterStyle = 3
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 536.000000000000000000
+    Size.Width = 720.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Lozinka:'
+    TabOrder = 1
+  end
+end

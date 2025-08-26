@@ -1,0 +1,32 @@
+inherited Form2_LgXhdpiPh: TForm2_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  Fill.Color = claWheat
+  Fill.Kind = Solid
+  DesignerMasterStyle = 0
+  inherited Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 104.000000000000000000
+    Size.Width = 450.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Lozinka:'
+  end
+  inherited Edit1: TEdit
+    Position.X = 112.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+  end
+  inherited btnLogin: TButton
+    Position.X = 160.000000000000000000
+    Position.Y = 248.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Potvrdi'
+  end
+end

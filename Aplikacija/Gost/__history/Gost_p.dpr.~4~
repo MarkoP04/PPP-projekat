@@ -1,0 +1,15 @@
+program Gost_p;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Gost_u in 'Gost_u.pas' {Form1},
+  Naruci_u in 'Naruci_u.pas' {Form2};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.Run;
+end.

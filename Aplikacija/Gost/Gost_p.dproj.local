@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/07/01 15:18:56.000.485,=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 15:19:16.000.783,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Gost_u.fmx=C:\Other programs\RAD Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2025/07/01 15:19:16.000.783,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Gost_u.pas=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 15:19:23.000.021,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Gost_p.dproj=C:\Other programs\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/07/01 15:19:54.000.077,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 15:20:09.000.800,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\DataModule_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 15:20:09.000.800,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\DataModule_u.dfm=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.dfm</Transaction>
+    <Transaction>2025/07/01 15:23:51.000.642,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.pas</Transaction>
+    <Transaction>2025/07/01 15:24:13.000.417,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Naruci_u.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.fmx</Transaction>
+    <Transaction>2025/07/01 15:24:13.000.417,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Naruci_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.pas</Transaction>
+    <Transaction>2025/07/02 15:10:14.000.867,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\DataModule_u.pas=</Transaction>
+    <Transaction>2025/07/02 15:18:44.000.373,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit3.pas</Transaction>
+    <Transaction>2025/07/02 15:19:11.000.642,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit3.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Message1_u.pas</Transaction>
+    <Transaction>2025/07/02 15:19:11.000.642,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit3.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Message1_u.fmx</Transaction>
+    <Transaction>2025/08/26 11:45:56.431,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.pas</Transaction>
+    <Transaction>2025/08/26 11:47:39.109,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\TCoffeeFrame.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.fmx</Transaction>
+    <Transaction>2025/08/26 11:47:39.109,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\TCoffeeFrame.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit1.pas</Transaction>
+    <Transaction>2025/08/26 11:58:31.617,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\CoffeeFrame.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\TCoffeeFrame.fmx</Transaction>
+    <Transaction>2025/08/26 11:58:31.617,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\CoffeeFrame.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\TCoffeeFrame.pas</Transaction>
+    <Transaction>2025/08/26 13:12:13.590,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.pas</Transaction>
+    <Transaction>2025/08/26 13:13:00.598,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\CocktailFrame.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.fmx</Transaction>
+    <Transaction>2025/08/26 13:13:00.598,C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\CocktailFrame.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Gost\Unit2.pas</Transaction>
+  </Transactions>
+</BorlandProject>

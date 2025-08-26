@@ -1,0 +1,17 @@
+program Radnik_p;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Radnik_u in 'Radnik_u.pas' {MainForm},
+  Login_u in 'Login_u.pas' {Form2},
+  DataModule_u in 'DataModule_u.pas' {DataModule1: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm2, Form2);
+  Application.Run;
+end.

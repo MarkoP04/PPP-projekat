@@ -1,0 +1,25 @@
+unit DataModule_u;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, IdBaseComponent, IdComponent,
+  IdTCPConnection, IdTCPClient;
+
+type
+  TDataModule1 = class(TDataModule)
+    IdTCPClient1: TIdTCPClient;
+  private
+  public
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

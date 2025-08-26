@@ -1,0 +1,35 @@
+unit Module_u;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, IdBaseComponent, IdComponent,
+  IdTCPConnection, IdTCPClient;
+
+type
+  TDataModule1 = class(TDataModule)
+    IdTCPClient1: TIdTCPClient;
+    procedure IdTCPClient1Connected(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+
+procedure TDataModule1.IdTCPClient1Connected(Sender: TObject);
+begin
+IdTCPClient1.IOHandler.WriteLn('Hello from Client');
+IdTCPClient1.Disconnect;
+end;
+
+end.

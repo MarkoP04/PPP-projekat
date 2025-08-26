@@ -1,0 +1,30 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  Height = 480
+  Width = 640
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Other programs\Programming\DB files\Databases\cafeba' +
+        'r.db'
+      'DriverID=SQLite')
+    Connected = True
+    Left = 56
+    Top = 40
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      '')
+    Left = 136
+    Top = 40
+  end
+  object IdTCPServer1: TIdTCPServer
+    Active = True
+    Bindings = <>
+    DefaultPort = 6000
+    OnExecute = IdTCPServer1Execute
+    Left = 256
+    Top = 48
+  end
+end
