@@ -49,6 +49,9 @@ implementation
 
 {$R *.dfm}
 
+uses
+Sank_u;
+
 procedure TDataModule1.DataModuleCreate(Sender: TObject);
 begin
   IdTCPServer1.DefaultPort := 6000;
@@ -128,6 +131,8 @@ begin
     WorkerLogout(AContext, JsonObj)
     else if CommandType = 'selectTables' then
     AssignTablesToWorker(JsonObj)
+    else if CommandType = 'order' then
+    Form1.AddOrder(JsonObj)
 end;
 
 procedure TDataModule1.WorkerLogin(AContext: TIdContext; const JSON: TJSONObject);

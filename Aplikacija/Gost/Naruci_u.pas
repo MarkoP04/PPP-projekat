@@ -25,6 +25,7 @@ TFrameClass = class of TFrame;
     procedure ShowFrame(NewFrameClass: TFrameClass);
     procedure KafaClick(Sender: TObject);
     procedure KoktelClick(Sender: TObject);
+    procedure EndOrder;
   private
 
   public
@@ -93,6 +94,39 @@ begin
   ItemsArray := TJSONArray.Create;
   try
     JSONObject.AddPair('type', 'order');
+    JSONObject.AddPair('table', Form1.TableNum);
+    for i := 0 to FItems.Count - 1 do
+    begin
+      Parts := FItems.ValueFromIndex[i].Split([',']);
+      if Length(Parts) < 2 then
+        Continue;
+
+      ItemObj := TJSONObject.Create;
+      ItemObj.AddPair('name', FItems.Names[i]);
+      ItemObj.AddPair('quantity', TJSONNumber.Create(StrToIntDef(Parts[0], 0)));
+      ItemObj.AddPair('price', TJSONNumber.Create(StrToIntDef(Parts[1], 0)));
+      ItemsArray.Add(ItemObj);
+    end;
+    JSONObject.AddPair('items', ItemsArray);
+
+    IdTCPClient1.IOHandler.WriteLn(JSONObject.ToString);
+  finally
+    JSONObject.Free;
+  end;
+end;
+
+procedure TForm2.EndOrder;
+var
+  JSONObject: TJSONObject;
+  ItemsArray: TJSONArray;
+  ItemObj: TJSONObject;
+  i: Integer;
+  Parts: TArray<string>;
+begin
+  JSONObject := TJSONObject.Create;
+  ItemsArray := TJSONArray.Create;
+  try
+    JSONObject.AddPair('type', 'order_end');
     JSONObject.AddPair('table', Form1.TableNum);
     for i := 0 to FItems.Count - 1 do
     begin

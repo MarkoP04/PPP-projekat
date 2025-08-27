@@ -35,7 +35,7 @@ begin
   else
     ShowMessage('Not connected to the server.');
 
-  Form2.SendItems;
+  Form2.EndOrder;
   Form2.ClearItems;
   Form3 := TForm3.Create(nil);
 try

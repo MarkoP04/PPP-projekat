@@ -1,0 +1,217 @@
+unit DataModule_u;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.SQLite,
+  FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, IdBaseComponent, IdComponent, IdCustomTCPServer,
+  IdTCPServer, IdContext, FMX.Dialogs, System.JSON, System.Generics.Collections, Sank_u;
+
+type
+  TDataModule1 = class(TDataModule)
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
+    IdTCPServer1: TIdTCPServer;
+    procedure IdTCPServer1Execute(AContext: TIdContext);
+    procedure DataModuleCreate(Sender: TObject);
+    procedure WorkerLogin(AContext: TIdContext; const JSON: TJSONObject);
+    procedure WorkerLogout(AContext: TIdContext; const JSON: TJSONObject);
+  private
+
+  public
+
+  end;
+
+  TWorkerTables = class
+  private
+    FWorkerID: Integer;
+    FTableNumbers: TList<Integer>;
+  public
+  constructor Create(AWorkerID: Integer);
+  destructor Destroy; override;
+
+    property WorkerID: Integer read FWorkerID;
+    property TableNumbers: TList<Integer> read FTableNumbers;
+  end;
+
+var
+  DataModule1: TDataModule1;
+  WorkerTableAssignments: TObjectList<TWorkerTables>;
+
+implementation
+
+{%CLASSGROUP 'FMX.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TDataModule1.DataModuleCreate(Sender: TObject);
+begin
+  IdTCPServer1.DefaultPort := 6000;
+  IdTCPServer1.Active := True;
+  WorkerTableAssignments := TObjectList<TWorkerTables>.Create(True);
+end;
+
+constructor TWorkerTables.Create(AWorkerID: Integer);
+begin
+  inherited Create;
+  FWorkerID := AWorkerID;
+  FTableNumbers := TList<Integer>.Create;
+end;
+
+destructor TWorkerTables.Destroy;
+begin
+  FTableNumbers.Free;
+  inherited Destroy;
+end;
+
+procedure AssignTablesToWorker(const JSON: TJSONObject);
+var
+  Assignment: TWorkerTables;
+  i: Integer;
+  WorkerID: Integer;
+  Tables: TList<Integer>;
+  TablesArray: TJSONArray;
+begin
+WorkerID := JSON.GetValue<Integer>('worker_id');
+TablesArray := JSON.GetValue<TJSONArray>('tables');
+
+Tables := TList<Integer>.Create;
+  for i := 0 to TablesArray.Count - 1 do
+    Tables.Add(TablesArray.Items[i].AsType<Integer>);
+
+  for Assignment in WorkerTableAssignments do
+    if Assignment.WorkerID = WorkerID then
+    begin
+      Assignment.FTableNumbers.Clear;
+      for i in Tables do
+        Assignment.FTableNumbers.Add(i);
+      Exit;
+    end;
+
+  Assignment := TWorkerTables.Create(WorkerID);
+for i in Tables do
+  Assignment.TableNumbers.Add(i);
+WorkerTableAssignments.Add(Assignment);
+end;
+
+function GetWorkerTables(WorkerID: Integer): TArray<Integer>;
+var
+  Assignment: TWorkerTables;
+begin
+  for Assignment in WorkerTableAssignments do
+    if Assignment.WorkerID = WorkerID then
+      Exit(Assignment.FTableNumbers.ToArray);
+
+  Result := [];
+end;
+
+
+procedure TDataModule1.IdTCPServer1Execute(AContext: TIdContext);
+var
+  JsonStr: string;
+  JsonObj: TJSONObject;
+  CommandType: string;
+begin
+
+  JsonStr := AContext.Connection.IOHandler.ReadLn;
+  JsonObj := TJSONObject.ParseJSONValue(JsonStr) as TJSONObject;
+  CommandType := JsonObj.GetValue<string>('type');
+
+  if CommandType = 'login' then
+    WorkerLogin(AContext, JsonObj)
+  else if CommandType = 'logout' then
+    WorkerLogout(AContext, JsonObj)
+    else if CommandType = 'selectTables' then
+    AssignTablesToWorker(JsonObj)
+    else if CommandType = 'order' then
+    TForm1.AddOrder(JsonObj)
+end;
+
+procedure TDataModule1.WorkerLogin(AContext: TIdContext; const JSON: TJSONObject);
+var
+  Password, WorkerID, ShiftID: Integer;
+  Query: TFDQuery;
+  JsonObj: TJSONObject;
+begin
+  Query := TFDQuery.Create(nil);
+  JsonObj := TJSONObject.Create;
+  try
+    Query.Connection := FDConnection1;
+    Password := JSON.GetValue<Integer>('password');
+
+      Query.Close;
+      Query.SQL.Text := 'SELECT worker_id FROM worker WHERE password = :pwd';
+      Query.ParamByName('pwd').AsInteger := Password;
+      Query.Open;
+
+       if Query.IsEmpty then
+      begin
+        JsonObj.AddPair('worker_id', -1);
+        Exit;
+      end;
+
+    WorkerID := Query.FieldByName('worker_id').AsInteger;
+    Query.Close;
+
+    Query.SQL.Text := 'INSERT INTO shift (worker_id, shift_start, shift_end, total_cash, total_card, total) ' +
+                      'VALUES (:wid, :start, NULL, 0, 0, 0)';
+    Query.ParamByName('wid').AsInteger := WorkerID;
+    Query.ParamByName('start').AsDateTime := Now;
+    Query.ExecSQL;
+
+    Query.SQL.Text := 'SELECT last_insert_rowid() AS shift_id';
+    Query.Open;
+
+    ShiftID := Query.FieldByName('shift_id').AsInteger;
+    JsonObj.AddPair('type', 'login');
+    JsonObj.AddPair('worker_id', WorkerID);
+    JsonObj.AddPair('shift_id', ShiftID);
+    AContext.Connection.IOHandler.WriteLn(JsonObj.ToString);
+
+  finally
+    Query.Free;
+  end;
+end;
+
+procedure TDataModule1.WorkerLogout(AContext: TIdContext; const JSON: TJSONObject);
+var
+Query: TFDQuery;
+WorkerID, ShiftID, TotalCash, TotalCard, Total: Integer;
+begin
+Query := TFDQuery.Create(nil);
+ try
+   Query.Connection := FDConnection1;
+
+   ShiftID := JSON.GetValue<Integer>('shift_id');
+   WorkerID := JSON.GetValue<Integer>('worker_id');
+   TotalCash := JSON.GetValue<Integer>('total_cash');
+   TotalCard := JSON.GetValue<Integer>('total_card');
+   Total := JSON.GetValue<Integer>('total');
+
+   Query.SQL.Text :=
+      'UPDATE shift ' +
+      'SET shift_end = :end_time, ' +
+      '    total_cash = :cash, ' +
+      '    total_card = :card, ' +
+      '    total = :total ' +
+      'WHERE shift_id = :sid AND worker_id = :wid';
+
+    Query.ParamByName('end_time').AsDateTime := Now;
+    Query.ParamByName('cash').AsInteger := TotalCash;
+    Query.ParamByName('card').AsInteger := TotalCard;
+    Query.ParamByName('total').AsInteger := Total;
+    Query.ParamByName('sid').AsInteger := ShiftID;
+    Query.ParamByName('wid').AsInteger := WorkerID;
+
+    Query.ExecSQL;
+ finally
+   Query.Free;
+ end;
+end;
+
+end.

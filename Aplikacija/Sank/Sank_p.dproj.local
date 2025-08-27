@@ -2,11 +2,11 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2025/07/01 11:40:19.000.162,=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/07/01 11:40:32.000.793,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_u.pas=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2025/07/01 11:40:32.000.793,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_u.fmx=C:\Other programs\RAD Studio\Projects\Unit1.fmx</Transaction>
-    <Transaction>2025/07/01 11:40:40.000.010,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_p.dproj=C:\Other programs\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/07/01 11:40:32.000.793,C:\Other programs\RAD Studio\Projects\Unit1.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_u.pas</Transaction>
+    <Transaction>2025/07/01 11:40:32.000.793,C:\Other programs\RAD Studio\Projects\Unit1.fmx=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_u.fmx</Transaction>
+    <Transaction>2025/07/01 11:40:40.000.010,C:\Other programs\RAD Studio\Projects\Project1.dproj=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Sank_p.dproj</Transaction>
     <Transaction>2025/07/01 11:41:33.000.115,=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Unit1.pas</Transaction>
-    <Transaction>2025/07/01 11:41:56.000.318,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\DataModule_u.dfm=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Unit1.dfm</Transaction>
-    <Transaction>2025/07/01 11:41:56.000.318,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\DataModule_u.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Unit1.pas</Transaction>
+    <Transaction>2025/07/01 11:41:56.000.318,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Unit1.pas=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\DataModule_u.pas</Transaction>
+    <Transaction>2025/07/01 11:41:56.000.318,C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\Unit1.dfm=C:\Other programs\RAD Studio\Projects\Projekat PIS\Sank\DataModule_u.dfm</Transaction>
   </Transactions>
 </BorlandProject>
