@@ -1,0 +1,301 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 500
+  ClientWidth = 400
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object CheckBox1: TCheckBox
+    Position.X = 168.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 25
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 168.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    Text = 'Anketa'
+    TabOrder = 26
+  end
+  object Label2: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 87.000000000000000000
+    Text = 'Kiselost:'
+    TabOrder = 27
+  end
+  object Label3: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 120.000000000000000000
+    Text = 'Slatkoca:'
+    TabOrder = 28
+  end
+  object Label4: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 153.000000000000000000
+    Text = 'Jacina:'
+    TabOrder = 29
+  end
+  object Label5: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 186.000000000000000000
+    Text = 'Osvezavajuce:'
+    TabOrder = 30
+  end
+  object Label6: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 219.000000000000000000
+    Text = 'Ukupno:'
+    TabOrder = 31
+  end
+  object Label7: TLabel
+    Position.X = 168.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '1'
+    TabOrder = 32
+    object Label10: TLabel
+      Position.X = 25.000000000000000000
+      Size.Width = 17.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = '2'
+      TabOrder = 4
+    end
+  end
+  object Label8: TLabel
+    Position.X = 218.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '3'
+    TabOrder = 33
+  end
+  object Label9: TLabel
+    Position.X = 268.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '5'
+    TabOrder = 34
+  end
+  object Label11: TLabel
+    Position.X = 243.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '4'
+    TabOrder = 35
+  end
+  object CheckBox2: TCheckBox
+    Position.X = 193.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 24
+  end
+  object CheckBox3: TCheckBox
+    Position.X = 218.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 23
+  end
+  object CheckBox4: TCheckBox
+    Position.X = 243.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 22
+  end
+  object CheckBox5: TCheckBox
+    Position.X = 268.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 21
+  end
+  object CheckBox6: TCheckBox
+    Position.X = 168.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+  end
+  object CheckBox7: TCheckBox
+    Position.X = 193.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+  end
+  object CheckBox8: TCheckBox
+    Position.X = 218.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+  end
+  object CheckBox9: TCheckBox
+    Position.X = 243.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 17
+  end
+  object CheckBox10: TCheckBox
+    Position.X = 268.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 16
+  end
+  object CheckBox11: TCheckBox
+    Position.X = 168.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+  end
+  object CheckBox12: TCheckBox
+    Position.X = 243.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+  end
+  object CheckBox13: TCheckBox
+    Position.X = 168.000000000000000000
+    Position.Y = 186.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+  end
+  object CheckBox14: TCheckBox
+    Position.X = 268.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+  end
+  object CheckBox15: TCheckBox
+    Position.X = 218.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+  end
+  object CheckBox16: TCheckBox
+    Position.X = 193.000000000000000000
+    Position.Y = 153.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+  end
+  object CheckBox17: TCheckBox
+    Position.X = 193.000000000000000000
+    Position.Y = 186.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+  end
+  object CheckBox18: TCheckBox
+    Position.X = 218.000000000000000000
+    Position.Y = 186.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+  end
+  object CheckBox19: TCheckBox
+    Position.X = 243.000000000000000000
+    Position.Y = 186.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+  end
+  object CheckBox20: TCheckBox
+    Position.X = 268.000000000000000000
+    Position.Y = 186.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+  end
+  object CheckBox21: TCheckBox
+    Position.X = 168.000000000000000000
+    Position.Y = 219.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+  end
+  object CheckBox22: TCheckBox
+    Position.X = 218.000000000000000000
+    Position.Y = 219.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+  end
+  object CheckBox23: TCheckBox
+    Position.X = 243.000000000000000000
+    Position.Y = 219.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+  end
+  object CheckBox24: TCheckBox
+    Position.X = 268.000000000000000000
+    Position.Y = 219.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object CheckBox25: TCheckBox
+    Position.X = 193.000000000000000000
+    Position.Y = 219.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+  end
+end

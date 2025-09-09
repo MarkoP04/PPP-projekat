@@ -1,0 +1,208 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 700
+  ClientWidth = 1000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ScrollBox1: TScrollBox
+    Position.X = 8.000000000000000000
+    Position.Y = 33.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 659.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 225.000000000000000000
+    Viewport.Height = 659.000000000000000000
+  end
+  object useless: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Recepti'
+    TabOrder = 1
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    TextSettings.VertAlign = Leading
+    Position.X = 241.000000000000000000
+    Position.Y = 83.000000000000000000
+    Size.Width = 376.000000000000000000
+    Size.Height = 609.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 33.000000000000000000
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Ime recepta:'
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 58.000000000000000000
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 497.000000000000000000
+    Position.Y = 33.000000000000000000
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'ID:'
+    TabOrder = 5
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 497.000000000000000000
+    Position.Y = 58.000000000000000000
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 6
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 625.000000000000000000
+    Position.Y = 275.000000000000000000
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Prosecne Ocene:'
+    TabOrder = 7
+  end
+  object Label6: TLabel
+    Position.X = 625.000000000000000000
+    Position.Y = 300.000000000000000000
+    Text = 'Kiselost:'
+    TabOrder = 8
+  end
+  object Label7: TLabel
+    Position.X = 625.000000000000000000
+    Position.Y = 375.000000000000000000
+    Text = 'Osvezavajuce:'
+    TabOrder = 9
+  end
+  object Label8: TLabel
+    Position.X = 625.000000000000000000
+    Position.Y = 350.000000000000000000
+    Text = 'Jacina:'
+    TabOrder = 10
+  end
+  object Label9: TLabel
+    Position.X = 625.000000000000000000
+    Position.Y = 400.000000000000000000
+    Text = 'Ukupno:'
+    TabOrder = 11
+  end
+  object Label10: TLabel
+    Position.X = 625.000000000000000000
+    Position.Y = 325.000000000000000000
+    Text = 'Slatkoca:'
+    TabOrder = 12
+  end
+  object Button1: TButton
+    Position.X = 872.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    Text = 'Nazad'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 872.000000000000000000
+    Position.Y = 597.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+    Text = 'Izmeni recept'
+    TextSettings.Trimming = None
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Position.X = 872.000000000000000000
+    Position.Y = 539.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+    Text = 'Obrisi recept'
+    TextSettings.Trimming = None
+    OnClick = Button3Click
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 16
+    Position.X = 625.000000000000000000
+    Position.Y = 83.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label11: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 625.000000000000000000
+    Position.Y = 58.000000000000000000
+    TextSettings.Font.Size = 13.000000000000000000
+    Text = 'Ime novog recepta:'
+    TabOrder = 17
+  end
+  object Button4: TButton
+    Position.X = 625.000000000000000000
+    Position.Y = 113.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+    Text = 'Dodaj recept'
+    TextSettings.Trimming = None
+    OnClick = Button4Click
+  end
+  object LabelKiselost: TLabel
+    Position.X = 753.000000000000000000
+    Position.Y = 300.000000000000000000
+    TabOrder = 19
+  end
+  object LabelSlatkoca: TLabel
+    Position.X = 753.000000000000000000
+    Position.Y = 325.000000000000000000
+    TabOrder = 20
+  end
+  object LabelJacina: TLabel
+    Position.X = 753.000000000000000000
+    Position.Y = 350.000000000000000000
+    TabOrder = 21
+  end
+  object LabelOsvezavajuce: TLabel
+    Position.X = 753.000000000000000000
+    Position.Y = 375.000000000000000000
+    TabOrder = 22
+  end
+  object LabelUkupno: TLabel
+    Position.X = 753.000000000000000000
+    Position.Y = 400.000000000000000000
+    TabOrder = 23
+  end
+  object Button5: TButton
+    Position.X = 872.000000000000000000
+    Position.Y = 275.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 24
+    Text = 'Oceni recept'
+    TextSettings.Trimming = None
+    OnClick = Button5Click
+  end
+end

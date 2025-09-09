@@ -1,0 +1,32 @@
+program Program_p;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Program_u in 'Program_u.pas' {Form1},
+  Ideja_u in 'Ideja_u.pas' {Form2},
+  Testiranje_u in 'Testiranje_u.pas' {Form3},
+  Anketa_u in 'Anketa_u.pas' {Form4},
+  Dobavljaci_u in 'Dobavljaci_u.pas' {Form5},
+  Izvestaj_test in 'Izvestaj_test.pas' {Form6},
+  Izvestaj_prodaje in 'Izvestaj_prodaje.pas' {Form7},
+  Porudzbenice_u in 'Porudzbenice_u.pas' {Form8},
+  Prijemnice_u in 'Prijemnice_u.pas' {Form9},
+  Change_log in 'Change_log.pas' {Form10};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm6, Form6);
+  Application.CreateForm(TForm7, Form7);
+  Application.CreateForm(TForm8, Form8);
+  Application.CreateForm(TForm9, Form9);
+  Application.CreateForm(TForm10, Form10);
+  Application.Run;
+end.

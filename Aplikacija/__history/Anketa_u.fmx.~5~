@@ -1,0 +1,162 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 500
+  ClientWidth = 400
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 163.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    Text = 'Anketa'
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 87.000000000000000000
+    Text = 'Kiselost:'
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 120.000000000000000000
+    Text = 'Slatkoca:'
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 153.000000000000000000
+    Text = 'Jacina:'
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 186.000000000000000000
+    Text = 'Osvezavajuce:'
+    TabOrder = 4
+  end
+  object Label6: TLabel
+    Position.X = 40.000000000000000000
+    Position.Y = 219.000000000000000000
+    Text = 'Ukupno:'
+    TabOrder = 5
+  end
+  object Label7: TLabel
+    Position.X = 168.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '1'
+    TabOrder = 6
+    object Label10: TLabel
+      Position.X = 25.000000000000000000
+      Size.Width = 17.000000000000000000
+      Size.Height = 17.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.HorzAlign = Center
+      Text = '2'
+      TabOrder = 4
+    end
+  end
+  object Label8: TLabel
+    Position.X = 218.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '3'
+    TabOrder = 7
+  end
+  object Label9: TLabel
+    Position.X = 268.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '5'
+    TabOrder = 8
+  end
+  object Label11: TLabel
+    Position.X = 243.000000000000000000
+    Position.Y = 62.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.HorzAlign = Center
+    Text = '4'
+    TabOrder = 9
+  end
+  object RadioButton1: TRadioButton
+    Position.X = 168.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 15
+  end
+  object RadioButton2: TRadioButton
+    Position.X = 193.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+  end
+  object RadioButton3: TRadioButton
+    Position.X = 218.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+  end
+  object RadioButton4: TRadioButton
+    Position.X = 243.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+  end
+  object RadioButton5: TRadioButton
+    Position.X = 268.000000000000000000
+    Position.Y = 87.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+  end
+  object Button1: TButton
+    Position.X = 272.000000000000000000
+    Position.Y = 452.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 16
+    Text = 'Nazad'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Position.X = 148.000000000000000000
+    Position.Y = 268.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 17
+    Text = 'Zavrsi anketu'
+    TextSettings.Trimming = None
+  end
+end

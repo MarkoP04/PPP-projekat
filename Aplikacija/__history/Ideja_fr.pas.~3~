@@ -1,0 +1,59 @@
+unit Ideja_fr;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants, 
+  FMX.Types, FMX.Graphics, FMX.Controls, FMX.Forms, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Edit, Program_u;
+
+type
+  TFrame1 = class(TFrame)
+    ScrollBox1: TScrollBox;
+    Button1: TButton;
+    Edit1: TEdit;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure LoadButtons;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+implementation
+
+{$R *.fmx}
+
+procedure TFrame1.LoadButtons;
+var
+  Btn: TButton;
+begin
+  ScrollBox1.DestroyComponents; // clear previous buttons
+  FDQuery1.SQL.Text := 'SELECT ideja_id, ime_ideje, ideja FROM Ideje';
+  FDQuery1.Open;
+
+
+  FDQuery1.First;
+  while not FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(ScrollBox1);
+    Btn.Parent := ScrollBox1;
+    Btn.Caption := FDQuery1.FieldByName('ime_ideje').AsString;
+    Btn.Top := ScrollBox1.ControlCount * 30; // vertical spacing
+    Btn.Left := 10;
+    Btn.Width := ScrollBox1.ClientWidth - 20;
+    Btn.Height := 25;
+
+    Btn.Tag := FDQuery1.FieldByName('ideja_id').AsInteger; // store ideja_id
+
+    Btn.OnClick := ButtonClick;  // common handler
+
+    FDQuery1.Next;
+  end;
+end;
+
+
+end.
