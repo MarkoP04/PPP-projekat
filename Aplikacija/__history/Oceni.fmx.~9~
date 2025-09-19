@@ -1,0 +1,232 @@
+object Form5: TForm5
+  Left = 0
+  Top = 0
+  Caption = 'Form5'
+  ClientHeight = 700
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Position.X = 9.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 644.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ScrollBox1: TScrollBox
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 636.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 225.000000000000000000
+    Viewport.Height = 636.000000000000000000
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Stavke'
+    TabOrder = 9
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = 'Stavka:'
+    TabOrder = 16
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 329.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 303.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TabOrder = 12
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 87.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = 'Ocenjuje:'
+    TabOrder = 14
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 17
+    TextSettings.Font.Size = 20.000000000000000000
+    Position.X = 329.000000000000000000
+    Position.Y = 88.000000000000000000
+    Size.Width = 303.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 80.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = 'Prototip:'
+    TabOrder = 15
+  end
+  object Label6: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 329.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 303.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TabOrder = 11
+  end
+  object Button1: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 512.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 19
+    Text = 'Nazad'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 384.000000000000000000
+    Position.Y = 200.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+    Text = 'Dodaj ocenu'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button2Click
+  end
+  object Label7: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 79.000000000000000000
+    Size.Height = 37.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = 'Ocena:'
+    TabOrder = 13
+  end
+  object RadioButton1: TRadioButton
+    Position.X = 353.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 30
+    Text = 'RadioButton1'
+  end
+  object RadioButton2: TRadioButton
+    Position.X = 378.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 29
+    Text = 'RadioButton1'
+  end
+  object RadioButton3: TRadioButton
+    Position.X = 403.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 28
+    Text = 'RadioButton1'
+  end
+  object RadioButton4: TRadioButton
+    Position.X = 428.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 27
+    Text = 'RadioButton1'
+  end
+  object RadioButton5: TRadioButton
+    Position.X = 453.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    Text = 'RadioButton1'
+  end
+  object RadioButton6: TRadioButton
+    Position.X = 478.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 25
+    Text = 'RadioButton1'
+  end
+  object RadioButton7: TRadioButton
+    Position.X = 503.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 24
+    Text = 'RadioButton1'
+  end
+  object RadioButton8: TRadioButton
+    Position.X = 528.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 23
+    Text = 'RadioButton1'
+  end
+  object RadioButton9: TRadioButton
+    Position.X = 553.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 22
+    Text = 'RadioButton1'
+  end
+  object RadioButton10: TRadioButton
+    Position.X = 578.000000000000000000
+    Position.Y = 146.000000000000000000
+    Size.Width = 17.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 21
+    Text = 'RadioButton1'
+  end
+end

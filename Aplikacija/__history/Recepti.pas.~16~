@@ -1,0 +1,112 @@
+unit Recepti;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FireDAC.Stan.Param,
+  FMX.Objects, FMX.Layouts, FMX.Controls.Presentation, FMX.StdCtrls;
+
+type
+  TForm6 = class(TForm)
+    Rectangle2: TRectangle;
+    ScrollBox1: TScrollBox;
+    Label1: TLabel;
+    Label9: TLabel;
+    Rectangle1: TRectangle;
+    Label8: TLabel;
+    Label4: TLabel;
+    Label7: TLabel;
+    Label2: TLabel;
+    Button1: TButton;
+    Label3: TLabel;
+    Label5: TLabel;
+    procedure Button1Click(Sender: TObject);
+    procedure LoadButtons;
+    procedure ButtonClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    ReceptID, PrototipID: Integer;
+  end;
+
+var
+  Form6: TForm6;
+
+implementation
+
+{$R *.fmx}
+
+uses
+Ideje_u;
+
+procedure TForm6.LoadButtons;
+var
+  Btn: TButton;
+  I: Integer;
+begin
+
+  for I := ScrollBox1.ControlsCount - 1 downto 0 do
+    if ScrollBox1.Controls[I] is TButton then
+      ScrollBox1.Controls[I].Free;
+
+  Form1.FDQuery1.Close;
+  Form1.FDQuery1.SQL.Text := 'SELECT recept_id, ime FROM Recepti';
+  Form1.FDQuery1.Open;
+
+  I := 0;
+  while not Form1.FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(Self);
+    Btn.Parent := ScrollBox1;
+
+    Btn.Text := Form1.FDQuery1.FieldByName('ime').AsString;
+
+    Btn.Position.Y := I * 35;
+    Btn.Position.X := 10;
+    Btn.Width := ScrollBox1.Width - 20;
+    Btn.Height := 30;
+    Btn.Tag := Form1.FDQuery1.FieldByName('recept_id').AsInteger;
+
+    Btn.OnClick := ButtonClick;
+
+    Inc(I);
+    Form1.FDQuery1.Next;
+  end;
+end;
+
+procedure TForm6.ButtonClick(Sender: TObject);
+var
+  Btn: TButton;
+  Cena: Double;
+begin
+  Btn := Sender as TButton;
+  ReceptID := Btn.Tag;
+  Label2.Text := Btn.Text;
+
+  Form1.FDQuery1.SQL.Text :=
+  'SELECT r.recept, r.cena, r.prototip_id, p.ime ' +
+    'FROM Recepti r ' +
+    'INNER JOIN Prototipi p ON r.prototip_id = p.prototip_id ' +
+    'WHERE r.recept_id = :id';
+  Form1.FDQuery1.ParamByName('id').AsInteger := ReceptID;
+  Form1.FDQuery1.Open;
+
+  Label9.Text := Form1.FDQuery1.FieldByName('recept').AsString;
+  Cena := Form1.FDQuery1.FieldByName('cena').AsFloat;
+  Label5.Text := Form1.FDQuery1.FieldByName('ime').AsString;
+  Label7.Text := FloatToStr(Cena) + ' EUR';
+end;
+
+procedure TForm6.FormCreate(Sender: TObject);
+begin
+  LoadButtons;
+end;
+
+procedure TForm6.Button1Click(Sender: TObject);
+begin
+  Form6.Free;
+end;
+
+end.

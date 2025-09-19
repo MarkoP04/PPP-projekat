@@ -1,0 +1,24 @@
+program Project1;
+
+uses
+  System.StartUpCopy,
+  FMX.Forms,
+  Ideje_u in 'Ideje_u.pas' {Form1},
+  Dodaj_ideju in 'Dodaj_ideju.pas' {Form2},
+  Prototipi in 'Prototipi.pas' {Form3},
+  Dodaj_prototip in 'Dodaj_prototip.pas' {Form4},
+  Oceni in 'Oceni.pas' {Form5},
+  Recepti in 'Recepti.pas' {Form6};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TForm2, Form2);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
+  Application.CreateForm(TForm5, Form5);
+  Application.CreateForm(TForm6, Form6);
+  Application.Run;
+end.

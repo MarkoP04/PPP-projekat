@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/09/17 16:45:54.000.597,=C:\Other programs\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/17 16:46:44.000.528,C:\Other programs\RAD Studio\Projects\Unit1.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Ideje_u.fmx</Transaction>
+    <Transaction>2025/09/17 16:46:44.000.528,C:\Other programs\RAD Studio\Projects\Unit1.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Ideje_u.pas</Transaction>
+    <Transaction>2025/09/17 16:55:26.000.998,C:\Other programs\RAD Studio\Projects\Project1.dproj=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Project1.dproj</Transaction>
+    <Transaction>2025/09/17 17:32:06.000.669,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit2.pas</Transaction>
+    <Transaction>2025/09/17 17:33:43.000.629,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit2.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Dodaj_ideju.pas</Transaction>
+    <Transaction>2025/09/17 17:33:43.000.629,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit2.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Dodaj_ideju.fmx</Transaction>
+    <Transaction>2025/09/17 18:10:17.000.454,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit3.pas</Transaction>
+    <Transaction>2025/09/17 18:10:34.000.409,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit3.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Prototipi.pas</Transaction>
+    <Transaction>2025/09/17 18:10:34.000.410,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit3.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Prototipi.fmx</Transaction>
+    <Transaction>2025/09/17 19:05:41.000.251,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit4.pas</Transaction>
+    <Transaction>2025/09/17 19:06:26.000.870,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit4.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Dodaj_prototip.pas</Transaction>
+    <Transaction>2025/09/17 19:06:26.000.870,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit4.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Dodaj_prototip.fmx</Transaction>
+    <Transaction>2025/09/18 14:27:32.000.997,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit5.pas</Transaction>
+    <Transaction>2025/09/18 14:27:55.000.670,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Oceni.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit5.fmx</Transaction>
+    <Transaction>2025/09/18 14:27:55.000.670,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Oceni.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit5.pas</Transaction>
+    <Transaction>2025/09/19 13:55:00.000.612,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit6.pas</Transaction>
+    <Transaction>2025/09/19 13:55:18.000.613,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit6.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Recepti.pas</Transaction>
+    <Transaction>2025/09/19 13:55:18.000.613,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit6.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Recepti.fmx</Transaction>
+    <Transaction>2025/09/19 14:16:41.000.269,=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit7.pas</Transaction>
+    <Transaction>2025/09/19 14:16:53.000.319,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit7.fmx=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Finalizuj_recept.fmx</Transaction>
+    <Transaction>2025/09/19 14:16:53.000.319,C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Unit7.pas=C:\Other programs\GitHubThings\PPP-projekat\Aplikacijaa\Finalizuj_recept.pas</Transaction>
+  </Transactions>
+</BorlandProject>

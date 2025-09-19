@@ -1,0 +1,233 @@
+unit Prototipi;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.Layouts,
+  FMX.Controls.Presentation, FMX.StdCtrls, FMX.Objects, FireDAC.Stan.Param, Oceni;
+
+type
+  TForm3 = class(TForm)
+    ScrollBox1: TScrollBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label4: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Rectangle2: TRectangle;
+    Button4: TButton;
+    Button3: TButton;
+    Label5: TLabel;
+    Label7: TLabel;
+    Label8: TLabel;
+    Label9: TLabel;
+    Label3: TLabel;
+    Label6: TLabel;
+    Label10: TLabel;
+    ScrollBox2: TScrollBox;
+    Label11: TLabel;
+    ScrollBox3: TScrollBox;
+    Label12: TLabel;
+    Label13: TLabel;
+    Rectangle3: TRectangle;
+    Rectangle4: TRectangle;
+    Label14: TLabel;
+    Rectangle1: TRectangle;
+    Label15: TLabel;
+    procedure LoadButtons;
+    procedure ButtonClick(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+    procedure LoadStavke;
+    procedure ButtonStavke(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    PrototipID: Integer;
+    OcenaID: Integer;
+  end;
+
+var
+  Form3: TForm3;
+
+implementation
+
+{$R *.fmx}
+
+uses
+Ideje_u;
+
+procedure TForm3.LoadButtons;
+var
+  Btn: TButton;
+  I: Integer;
+begin
+
+  for I := ScrollBox1.ControlsCount - 1 downto 0 do
+    if ScrollBox1.Controls[I] is TButton then
+      ScrollBox1.Controls[I].Free;
+
+  Form1.FDQuery1.Close;
+  Form1.FDQuery1.SQL.Text := 'SELECT prototip_id, ime FROM Prototipi';
+  Form1.FDQuery1.Open;
+
+  I := 0;
+  while not Form1.FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(ScrollBox1);
+    Btn.Parent := ScrollBox1;
+
+    Btn.Text := Form1.FDQuery1.FieldByName('ime').AsString;
+
+    Btn.Position.Y := I * 35;
+    Btn.Position.X := 10;
+    Btn.Width := ScrollBox1.Width - 20;
+    Btn.Height := 30;
+    Btn.Tag := Form1.FDQuery1.FieldByName('prototip_id').AsInteger;
+
+    Btn.OnClick := ButtonClick;
+
+    Inc(I);
+    Form1.FDQuery1.Next;
+  end;
+end;
+
+procedure TForm3.Button2Click(Sender: TObject);
+begin
+  Form3.Free;
+end;
+
+procedure TForm3.Button4Click(Sender: TObject);
+begin
+  Form5 := TForm5.Create(Self);
+  Form5.Show;
+end;
+
+procedure TForm3.ButtonClick(Sender: TObject);
+var
+  Btn: TButton;
+begin
+  Btn := Sender as TButton;
+  PrototipID := Btn.Tag;
+  Label5.Text := Btn.Text;
+
+  Form1.FDQuery1.SQL.Text := 'SELECT p.prototip, p.zaduzen, i.ime FROM Prototipi p ' +
+    'INNER JOIN Ideje i ON p.ideja_id = i.ideja_id ' +
+    'WHERE p.prototip_id = :id';;
+  Form1.FDQuery1.ParamByName('id').AsInteger := Btn.Tag;
+  Form1.FDQuery1.Open;
+
+  Label3.Text := Form1.FDQuery1.FieldByName('prototip').AsString;
+  Label7.Text := Form1.FDQuery1.FieldByName('zaduzen').AsString;
+  Label15.Text := Form1.FDQuery1.FieldByName('ime').AsString;
+
+  LoadStavke;
+end;
+
+procedure TForm3.LoadStavke;
+var
+  Btn: TButton;
+  I: Integer;
+begin
+
+  for I := ScrollBox2.ControlsCount - 1 downto 0 do
+    if ScrollBox2.Controls[I] is TButton then
+      ScrollBox2.Controls[I].Free;
+
+  Form1.FDQuery1.Close;
+  Form1.FDQuery1.SQL.Text :=
+    'SELECT DISTINCT s.stavka, s.stavka_id ' +
+    'FROM Ocene o ' +
+    'INNER JOIN Stavke s ON o.stavka_id = s.stavka_id ' +
+    'WHERE o.prototip_id = :id';
+  Form1.FDQuery1.ParamByName('id').AsInteger := PrototipID;
+  Form1.FDQuery1.Open;
+
+  I := 0;
+  while not Form1.FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(ScrollBox2);
+    Btn.Parent := ScrollBox2;
+
+    Btn.Text := Form1.FDQuery1.FieldByName('stavka').AsString;
+
+    Btn.Position.Y := I * 35;
+    Btn.Position.X := 10;
+    Btn.Width := ScrollBox2.Width - 20;
+    Btn.Height := 30;
+    Btn.Tag := Form1.FDQuery1.FieldByName('stavka_id').AsInteger;
+
+    Btn.OnClick := ButtonStavke;
+
+    Inc(I);
+    Form1.FDQuery1.Next;
+  end;
+end;
+
+procedure TForm3.ButtonStavke(Sender: TObject);
+var
+  Btn: TButton;
+  I, Ocena, Brojac, Zbir: Integer;
+  Ocenio: String;
+  Prosek: Double;
+begin
+  Btn := Sender as TButton;
+  OcenaID := Btn.Tag;
+  Label14.Text := Btn.Text;
+
+  for I := ScrollBox3.ControlsCount - 1 downto 0 do
+    if ScrollBox3.Controls[I] is TButton then
+      ScrollBox3.Controls[I].Free;
+
+  Form1.FDQuery1.Close;
+  Form1.FDQuery1.SQL.Text :=
+    'SELECT o.ocenio, o.ocena ' +
+    'FROM Ocene o ' +
+    'WHERE o.stavka_id = :sid AND o.prototip_id = :pid';
+  Form1.FDQuery1.ParamByName('sid').AsInteger := OcenaID;
+  Form1.FDQuery1.ParamByName('pid').AsInteger := PrototipID;
+  Form1.FDQuery1.Open;
+
+  I := 0;
+  Zbir := 0;
+  Brojac := 0;
+
+  while not Form1.FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(ScrollBox3);
+    Btn.Parent := ScrollBox3;
+
+    Ocenio := Form1.FDQuery1.FieldByName('ocenio').AsString;
+    Ocena := Form1.FDQuery1.FieldByName('ocena').AsInteger;
+    Btn.Text := Ocenio + ' - ' + IntToStr(Ocena);
+
+    Btn.Position.Y := I * 35;
+    Btn.Position.X := 10;
+    Btn.Width := ScrollBox3.Width - 20;
+    Btn.Height := 30;
+
+    Inc(I);
+
+    Zbir := Zbir + Ocena;
+    Inc(Brojac);
+
+    Form1.FDQuery1.Next;
+  end;
+
+  if Brojac > 0 then
+    Prosek := Zbir / Brojac
+  else
+    Prosek := 0;
+
+  Label13.Text := FormatFloat('0.00', Prosek);
+end;
+
+
+procedure TForm3.FormCreate(Sender: TObject);
+begin
+  LoadButtons;
+end;
+
+end.

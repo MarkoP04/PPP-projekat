@@ -1,0 +1,208 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 700
+  ClientWidth = 1000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Position.X = 9.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 644.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Rectangle1: TRectangle
+    Position.X = 241.000000000000000000
+    Position.Y = 122.000000000000000000
+    Size.Width = 623.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ScrollBox1: TScrollBox
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 636.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 225.000000000000000000
+    Viewport.Height = 636.000000000000000000
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ideje'
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 235.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Ime ideje:'
+    TabOrder = 8
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 484.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Datum:'
+    TabOrder = 7
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 742.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Osmislio:'
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 41.000000000000000000
+    Size.Width = 248.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 484.000000000000000000
+    Position.Y = 41.000000000000000000
+    Size.Width = 261.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 5
+  end
+  object Label7: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 742.000000000000000000
+    Position.Y = 41.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 4
+  end
+  object Button1: TButton
+    Anchors = [akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 12
+    Text = 'Recepti'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+  end
+  object Button2: TButton
+    Anchors = [akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 604.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Prototipi'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button2Click
+  end
+  object Label8: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 74.000000000000000000
+    Size.Width = 623.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ideja'
+    TabOrder = 1
+  end
+  object Button4: TButton
+    Anchors = [akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 346.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Dodaj prototip'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button4Click
+  end
+  object Button5: TButton
+    Anchors = [akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 122.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Dodaj novu ideju'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button5Click
+  end
+  object Label9: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 122.000000000000000000
+    Size.Width = 622.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.VertAlign = Leading
+    TabOrder = 13
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      
+        'Database=C:\Other programs\GitHubThings\PPP-projekat\Podaci\Idej' +
+        'e.db'
+      'DriverID=SQLite')
+    Left = 801
+    Top = 626
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    Left = 777
+    Top = 570
+  end
+  object FDQueryAction: TFDQuery
+    Connection = FDConnection1
+    Left = 761
+    Top = 626
+  end
+end

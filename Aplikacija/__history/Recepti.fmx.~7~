@@ -1,0 +1,138 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = 'Form6'
+  ClientHeight = 700
+  ClientWidth = 1000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle1: TRectangle
+    Position.X = 241.000000000000000000
+    Position.Y = 122.000000000000000000
+    Size.Width = 623.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Rectangle2: TRectangle
+    Position.X = 9.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 644.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object ScrollBox1: TScrollBox
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 636.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 225.000000000000000000
+    Viewport.Height = 636.000000000000000000
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Recepti'
+    TabOrder = 4
+  end
+  object Label9: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 122.000000000000000000
+    Size.Width = 622.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.VertAlign = Leading
+    TabOrder = 16
+  end
+  object Label8: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 241.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 144.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    Text = 'Ime recepta:'
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    AutoTranslate = False
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Cena:'
+    TabOrder = 6
+  end
+  object Label7: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 242.000000000000000000
+    Position.Y = 89.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 8
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 393.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 471.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Anchors = [akRight, akBottom]
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 18
+    Text = 'Nazad'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Label3: TLabel
+    AutoTranslate = False
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 742.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    Text = 'Poreklom prototipa:'
+    TabOrder = 5
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 742.000000000000000000
+    Position.Y = 89.000000000000000000
+    Size.Width = 250.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 15.000000000000000000
+    TabOrder = 7
+  end
+end

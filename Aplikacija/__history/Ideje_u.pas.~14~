@@ -1,0 +1,118 @@
+unit Ideje_u;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs, FMX.StdCtrls,
+  FMX.Controls.Presentation, FMX.Layouts, FMX.Edit, FireDAC.Stan.Intf,
+  FireDAC.Stan.Option, FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf,
+  FireDAC.Stan.Def, FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys,
+  FireDAC.Phys.SQLite, FireDAC.Phys.SQLiteDef, FireDAC.Stan.ExprFuncs,
+  FireDAC.Phys.SQLiteWrapper.Stat, FireDAC.FMXUI.Wait, FireDAC.Stan.Param,
+  FireDAC.DatS, FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client, Dodaj_ideju, FMX.Objects;
+
+type
+  TForm1 = class(TForm)
+    ScrollBox1: TScrollBox;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
+    Label7: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Label8: TLabel;
+    Button4: TButton;
+    Button5: TButton;
+    Label9: TLabel;
+    FDConnection1: TFDConnection;
+    FDQuery1: TFDQuery;
+    FDQueryAction: TFDQuery;
+    Brush1: TBrushObject;
+    Rectangle1: TRectangle;
+    Rectangle2: TRectangle;
+    procedure ButtonClick(Sender: TObject);
+    procedure LoadButtons;
+    procedure Button5Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    IdejaID: integer;
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.fmx}
+
+procedure TForm1.LoadButtons;
+var
+  Btn: TButton;
+  I: Integer;
+begin
+
+  for I := ScrollBox1.ControlsCount - 1 downto 0 do
+    if ScrollBox1.Controls[I] is TButton then
+      ScrollBox1.Controls[I].Free;
+
+  Form1.FDQuery1.Close;
+  Form1.FDQuery1.SQL.Text := 'SELECT ideja_id, ime FROM Ideje';
+  Form1.FDQuery1.Open;
+
+  I := 0;
+  while not Form1.FDQuery1.Eof do
+  begin
+    Btn := TButton.Create(Self);
+    Btn.Parent := ScrollBox1;
+
+    Btn.Text := Form1.FDQuery1.FieldByName('ime').AsString;
+
+    Btn.Position.Y := I * 35;
+    Btn.Position.X := 10;
+    Btn.Width := ScrollBox1.Width - 20;
+    Btn.Height := 30;
+    Btn.Tag := Form1.FDQuery1.FieldByName('ideja_id').AsInteger;
+
+    Btn.OnClick := ButtonClick;
+
+    Inc(I);
+    Form1.FDQuery1.Next;
+  end;
+end;
+
+procedure TForm1.Button5Click(Sender: TObject);
+begin
+  Form2 := TForm2.Create(Self);
+  Form2.Show;
+end;
+
+procedure TForm1.ButtonClick(Sender: TObject);
+var
+  Btn: TButton;
+begin
+  Btn := Sender as TButton;
+  IdejaID := Btn.Tag;
+  Label5.Text := Btn.Text;
+
+  Form1.FDQuery1.SQL.Text := 'SELECT ideja, datum, smislio FROM Ideje WHERE ideja_id = :id';
+  Form1.FDQuery1.ParamByName('id').AsInteger := Btn.Tag;
+  Form1.FDQuery1.Open;
+
+  Label6.Text := Form1.FDQuery1.FieldByName('datum').AsString;
+  Label7.Text := Form1.FDQuery1.FieldByName('smislio').AsString;
+  Label9.Text := Form1.FDQuery1.FieldByName('ideja').AsString;
+end;
+
+procedure TForm1.FormCreate(Sender: TObject);
+begin
+  LoadButtons;
+end;
+
+end.
