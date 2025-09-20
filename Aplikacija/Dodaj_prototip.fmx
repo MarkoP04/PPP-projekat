@@ -16,18 +16,6 @@ object Form4: TForm4
     Size.Height = 644.000000000000000000
     Size.PlatformDefault = False
   end
-  object Edit1: TEdit
-    Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 1
-    TextSettings.Font.Size = 15.000000000000000000
-    TextSettings.VertAlign = Leading
-    Position.X = 244.000000000000000000
-    Position.Y = 136.000000000000000000
-    Size.Width = 620.000000000000000000
-    Size.Height = 556.000000000000000000
-    Size.PlatformDefault = False
-    StyledSettings = [Family, Style, FontColor]
-  end
   object Label8: TLabel
     StyledSettings = [Family, Style, FontColor]
     Position.X = 244.000000000000000000
@@ -38,7 +26,7 @@ object Form4: TForm4
     TextSettings.Font.Size = 25.000000000000000000
     TextSettings.HorzAlign = Center
     Text = 'Nacin pripreme'
-    TabOrder = 6
+    TabOrder = 7
   end
   object Label2: TLabel
     StyledSettings = [Family, Style, FontColor]
@@ -54,7 +42,7 @@ object Form4: TForm4
   end
   object Edit3: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 10
+    TabOrder = 12
     TextSettings.Font.Size = 15.000000000000000000
     Position.X = 413.000000000000000000
     Position.Y = 49.000000000000000000
@@ -73,11 +61,11 @@ object Form4: TForm4
     TextSettings.Font.Size = 25.000000000000000000
     TextSettings.HorzAlign = Center
     Text = 'Ime prototipa:'
-    TabOrder = 3
+    TabOrder = 4
   end
   object Edit2: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    TabOrder = 11
+    TabOrder = 13
     TextSettings.Font.Size = 15.000000000000000000
     Position.X = 413.000000000000000000
     Position.Y = 8.000000000000000000
@@ -93,7 +81,7 @@ object Form4: TForm4
     Size.Width = 120.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 7
+    TabOrder = 8
     Text = 'Dodaj prototip'
     TextSettings.Font.Size = 15.000000000000000000
     TextSettings.Trimming = None
@@ -106,7 +94,7 @@ object Form4: TForm4
     Size.Width = 120.000000000000000000
     Size.Height = 40.000000000000000000
     Size.PlatformDefault = False
-    TabOrder = 8
+    TabOrder = 10
     Text = 'Nazad'
     TextSettings.Font.Size = 15.000000000000000000
     TextSettings.Trimming = None
@@ -154,8 +142,18 @@ object Form4: TForm4
     Size.Height = 38.000000000000000000
     Size.PlatformDefault = False
     TextSettings.Font.Size = 25.000000000000000000
-    TextSettings.HorzAlign = Center
-    TextSettings.VertAlign = Leading
-    TabOrder = 4
+    TabOrder = 3
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 242.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 622.000000000000000000
+    Size.Height = 556.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 14
+    Viewport.Width = 618.000000000000000000
+    Viewport.Height = 552.000000000000000000
   end
 end

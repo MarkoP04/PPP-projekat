@@ -1,0 +1,65 @@
+unit Dodaj_ideju;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, FireDAC.Stan.Param,
+  FMX.Memo.Types, FMX.ScrollBox, FMX.Memo;
+
+type
+  TForm2 = class(TForm)
+    Label8: TLabel;
+    Button1: TButton;
+    Button2: TButton;
+    Label1: TLabel;
+    Edit2: TEdit;
+    Label2: TLabel;
+    Edit3: TEdit;
+    Memo1: TMemo;
+    procedure Button1Click(Sender: TObject);
+    procedure Button2Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.fmx}
+
+uses
+Ideje_u;
+
+procedure TForm2.Button1Click(Sender: TObject);
+begin
+  Form2.Free;
+end;
+
+procedure TForm2.Button2Click(Sender: TObject);
+begin
+  Form1.FDQueryAction.Close;
+  Form1.FDQueryAction.SQL.Text :=
+    'INSERT INTO Ideje (ime, ideja, smislio, datum) VALUES (:pIme, :pIdeja, :pSmislio, :pDatum)';
+
+  Form1.FDQueryAction.ParamByName('pIme').AsString := Edit2.Text;
+  Form1.FDQueryAction.ParamByName('pIdeja').AsString := Edit1.Text;
+  Form1.FDQueryAction.ParamByName('pSmislio').AsString := Edit3.Text;
+  Form1.FDQueryAction.ParamByName('pDatum').AsDate := Now;
+
+  try
+    Form1.FDQueryAction.ExecSQL;
+    ShowMessage('Ideja je uspesno dodata.');
+    Form2.Free;
+  except
+    on E: Exception do
+      ShowMessage('Error: ' + E.Message);
+  end;
+end;
+
+end.

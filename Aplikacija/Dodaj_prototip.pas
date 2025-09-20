@@ -5,11 +5,11 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, FMX.Layouts, FMX.Objects, FireDAC.Stan.Param;
+  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, FMX.Layouts, FMX.Objects, FireDAC.Stan.Param,
+  FMX.Memo.Types, FMX.ScrollBox, FMX.Memo;
 
 type
   TForm4 = class(TForm)
-    Edit1: TEdit;
     Label8: TLabel;
     Label2: TLabel;
     Edit3: TEdit;
@@ -22,6 +22,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Memo1: TMemo;
     procedure LoadButtons;
     procedure ButtonClick(Sender: TObject);
     procedure Button2Click(Sender: TObject);
@@ -90,7 +91,7 @@ begin
     'INSERT INTO Prototipi (ime, prototip, zaduzen, ideja_id) VALUES (:pIme, :pPrototip, :pZaduzen, :pIdeja_id)';
 
   Form1.FDQueryAction.ParamByName('pIme').AsString := Edit2.Text;
-  Form1.FDQueryAction.ParamByName('pPrototip').AsString := Edit1.Text;
+  Form1.FDQueryAction.ParamByName('pPrototip').AsString := Memo1.Text;
   Form1.FDQueryAction.ParamByName('pZaduzen').AsString := Edit3.Text;
   Form1.FDQueryAction.ParamByName('pIdeja_id').AsInteger := IdejaID;
 

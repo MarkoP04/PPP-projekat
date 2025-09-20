@@ -5,11 +5,11 @@ interface
 uses
   System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, FireDAC.Stan.Param;
+  FMX.Controls.Presentation, FMX.Edit, FMX.StdCtrls, FireDAC.Stan.Param,
+  FMX.Memo.Types, FMX.ScrollBox, FMX.Memo;
 
 type
   TForm2 = class(TForm)
-    Edit1: TEdit;
     Label8: TLabel;
     Button1: TButton;
     Button2: TButton;
@@ -17,6 +17,7 @@ type
     Edit2: TEdit;
     Label2: TLabel;
     Edit3: TEdit;
+    Memo1: TMemo;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
   private
@@ -47,7 +48,7 @@ begin
     'INSERT INTO Ideje (ime, ideja, smislio, datum) VALUES (:pIme, :pIdeja, :pSmislio, :pDatum)';
 
   Form1.FDQueryAction.ParamByName('pIme').AsString := Edit2.Text;
-  Form1.FDQueryAction.ParamByName('pIdeja').AsString := Edit1.Text;
+  Form1.FDQueryAction.ParamByName('pIdeja').AsString := Memo1.Text;
   Form1.FDQueryAction.ParamByName('pSmislio').AsString := Edit3.Text;
   Form1.FDQueryAction.ParamByName('pDatum').AsDate := Now;
 

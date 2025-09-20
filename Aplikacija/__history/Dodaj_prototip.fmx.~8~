@@ -1,0 +1,161 @@
+object Form4: TForm4
+  Left = 0
+  Top = 0
+  Caption = 'Form4'
+  ClientHeight = 700
+  ClientWidth = 1000
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Rectangle2: TRectangle
+    Position.X = 9.000000000000000000
+    Position.Y = 48.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 644.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.VertAlign = Leading
+    Position.X = 244.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 620.000000000000000000
+    Size.Height = 556.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label8: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 244.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 181.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Nacin pripreme'
+    TabOrder = 6
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 244.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Zaduzen/i:'
+    TabOrder = 2
+  end
+  object Edit3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 10
+    TextSettings.Font.Size = 15.000000000000000000
+    Position.X = 413.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 579.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 244.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 161.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ime prototipa:'
+    TabOrder = 3
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 11
+    TextSettings.Font.Size = 15.000000000000000000
+    Position.X = 413.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 579.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Button2: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 300.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    Text = 'Dodaj prototip'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button2Click
+  end
+  object Button1: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 872.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'Nazad'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object ScrollBox1: TScrollBox
+    Position.X = 8.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 636.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 225.000000000000000000
+    Viewport.Height = 636.000000000000000000
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 32.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ideje'
+    TabOrder = 9
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 516.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 181.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Poreklom ideje:'
+    TabOrder = 5
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 705.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 287.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    TextSettings.VertAlign = Leading
+    TabOrder = 4
+  end
+end

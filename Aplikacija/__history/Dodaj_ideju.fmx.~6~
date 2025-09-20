@@ -1,0 +1,107 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 700
+  ClientWidth = 764
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.VertAlign = Leading
+    Position.X = 8.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Width = 620.000000000000000000
+    Size.Height = 556.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label8: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 620.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ideja'
+    TabOrder = 3
+  end
+  object Button1: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 636.000000000000000000
+    Position.Y = 652.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Text = 'Nazad'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 636.000000000000000000
+    Position.Y = 300.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Text = 'Dodaj ideju'
+    TextSettings.Font.Size = 15.000000000000000000
+    TextSettings.Trimming = None
+    OnClick = Button2Click
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Ime ideje:'
+    TabOrder = 2
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    TextSettings.Font.Size = 15.000000000000000000
+    Position.X = 129.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 627.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 25.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Osmislio:'
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    TextSettings.Font.Size = 15.000000000000000000
+    Position.X = 129.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 627.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+end
